@@ -44,6 +44,16 @@ logo.setAttribute('src', siteContent["nav"]["img-src"]);
 // Task 1: Create Selectors to point your data into elements.
 const navLinks = document.querySelectorAll('nav a');
 
+const heading = document.querySelector('.cta-text h1');
+const ctaButton = document.querySelector('.cta-text button');
+const ctaImage = document.querySelector('#cta-img');
+
+const featuresHeading = document.querySelector('.top-content .text-content h4');
+const featuresPara = document.querySelector('.top-content .text-content p');
+const aboutHeading = document.querySelector('.top-content .text-content:nth child(2) h4');
+const aboutPara = document.querySelector('.top-content .text-content:nth child(2) p');
+
+
 // Task 2: Update the HTML with the JSON data
 // Using your selectors, update the content to match the example file
 

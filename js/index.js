@@ -48,10 +48,10 @@ const heading = document.querySelector('.cta-text h1');
 const ctaButton = document.querySelector('.cta-text button');
 const ctaImage = document.querySelector('#cta-img');
 
-const featuresHeading = document.querySelector('.top-content .text-content h4');
-const featuresPara = document.querySelector('.top-content .text-content p');
-const aboutHeading = document.querySelector('.top-content .text-content:nth child(2) h4');
-const aboutPara = document.querySelector('.top-content .text-content:nth child(2) p');
+const middleImage = document.getElementById('middle-img')
+
+const mainContentHeading = document.querySelectorAll('.text-content h4');
+const mainContentPara = document.querySelectorAll(' .text-content p');
 
 const contactHeading = document.querySelector('.contact h4');
 const address = document.querySelector('.contact p');
@@ -63,7 +63,34 @@ const footerPara = document.querySelector('footer p');
 // Task 2: Update the HTML with the JSON data
 // Using your selectors, update the content to match the example file
 
+navLinks[0].textContent = siteContent.nav['nav-item-1'];
+navLinks[1].textContent = siteContent.nav['nav-item-2'];
+navLinks[2].textContent = siteContent.nav['nav-item-3'];
+navLinks[3].textContent = siteContent.nav['nav-item-4'];
+navLinks[4].textContent = siteContent.nav['nav-item-5'];
+navLinks[5].textContent = siteContent.nav['nav-item-6'];
+
+//console.log(navLinks);
+
+heading.textContent = siteContent.cta['h1'];
+ctaButton.textContent = siteContent.cta['button'];
+ctaImage.setAttribute('src', siteContent.cta['img-src']);
+
+middleImage.setAttribute('src', siteContent['main-content']['middle-img-src'])
+
+mainContentHeading.textContent = siteContent['main-content']['services-h4'];
+mainContentPara.textContent = siteContent['main-content']['services-content'];
+
+contactHeading.textContent = siteContent.contact['contact-h4'];
+address.textContent = siteContent.contact['address'];
+phone.textContent = siteContent.contact['phone'];
+email.textContent = siteContent.contact['email'];
+
+footerPara.textContent = siteContent.footer['copyright'];
 
 // Task 3: Add new content
 // Change the color of the navigation text to be Green.
 // Utilize .appendChild() and .prepend() to add two new items to the navigation system. Call them whatever you want.
+
+navLinks.forEach(link => link.style.color = 'green');
+

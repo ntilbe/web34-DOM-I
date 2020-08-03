@@ -53,6 +53,12 @@ const featuresPara = document.querySelector('.top-content .text-content p');
 const aboutHeading = document.querySelector('.top-content .text-content:nth child(2) h4');
 const aboutPara = document.querySelector('.top-content .text-content:nth child(2) p');
 
+const contactHeading = document.querySelector('.contact h4');
+const address = document.querySelector('.contact p');
+const phone = document.querySelector('.contact p:nth-child(3)');
+const email = document.querySelector('.contact p:nth-child(4)');
+
+const footerPara = document.querySelector('footer p');
 
 // Task 2: Update the HTML with the JSON data
 // Using your selectors, update the content to match the example file

@@ -48,7 +48,7 @@ const heading = document.querySelector('.cta-text h1');
 const ctaButton = document.querySelector('.cta-text button');
 const ctaImage = document.querySelector('#cta-img');
 
-const middleImage = document.getElementById('middle-img')
+const middleImage = document.getElementById('middle-img');
 
 const mainContentHeading = document.querySelectorAll('.text-content h4');
 const mainContentPara = document.querySelectorAll(' .text-content p');
@@ -70,16 +70,26 @@ navLinks[3].textContent = siteContent.nav['nav-item-4'];
 navLinks[4].textContent = siteContent.nav['nav-item-5'];
 navLinks[5].textContent = siteContent.nav['nav-item-6'];
 
-//console.log(navLinks);
-
 heading.textContent = siteContent.cta['h1'];
 ctaButton.textContent = siteContent.cta['button'];
 ctaImage.setAttribute('src', siteContent.cta['img-src']);
 
 middleImage.setAttribute('src', siteContent['main-content']['middle-img-src'])
 
-mainContentHeading.textContent = siteContent['main-content']['services-h4'];
-mainContentPara.textContent = siteContent['main-content']['services-content'];
+mainContentHeading[0].textContent = siteContent['main-content']['features-h4'];
+mainContentPara[0].textContent = siteContent['main-content']['features-content'];
+
+mainContentHeading[1].textContent = siteContent['main-content']['about-h4'];
+mainContentPara[1].textContent = siteContent['main-content']['about-content'];
+
+mainContentHeading[2].textContent = siteContent['main-content']['services-h4'];
+mainContentPara[2].textContent = siteContent['main-content']['services-content'];
+
+mainContentHeading[3].textContent = siteContent['main-content']['product-h4'];
+mainContentPara[3].textContent = siteContent['main-content']['product-content'];
+
+mainContentHeading[4].textContent = siteContent['main-content']['vision-h4'];
+mainContentPara[4].textContent = siteContent['main-content']['vision-content'];
 
 contactHeading.textContent = siteContent.contact['contact-h4'];
 address.textContent = siteContent.contact['address'];
@@ -90,7 +100,27 @@ footerPara.textContent = siteContent.footer['copyright'];
 
 // Task 3: Add new content
 // Change the color of the navigation text to be Green.
-// Utilize .appendChild() and .prepend() to add two new items to the navigation system. Call them whatever you want.
 
 navLinks.forEach(link => link.style.color = 'green');
 
+// Utilize .appendChild() and .prepend() to add two new items to the navigation system. Call them whatever you want.
+
+const newLink1 = document.createElement('a'); 
+const newLink2 = document.createElement('a');
+
+newLink1.href = '#'; 
+newLink1.textContent = 'Appended';
+
+newLink2.href = '#'; 
+newLink2.textContent = 'Prepended';
+
+let nav = document.querySelector('nav');
+
+nav.appendChild(newLink1); 
+nav.prepend(newLink2);
+
+// turning all links green 
+// -- new links aren't in navLinks (above)
+// -- need a new node list with updated a tags
+const newNavLinks = document.querySelectorAll('nav a');
+newNavLinks.forEach(link => link.style.color = 'green');

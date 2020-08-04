@@ -124,3 +124,11 @@ nav.prepend(newLink2);
 // -- need a new node list with updated a tags
 const newNavLinks = document.querySelectorAll('nav a');
 newNavLinks.forEach(link => link.style.color = 'green');
+
+// STRETCH 
+// Update styles in JavaScript
+
+document.body.style.backgroundColor = "lightGrey";
+mainContentHeading.forEach(link => link.style.color = 'blue');
+document.body.style.fontFamily = "Comic Sans MS, cursive, sans-serif";
+document.body.style.fontWeight = "lighter";

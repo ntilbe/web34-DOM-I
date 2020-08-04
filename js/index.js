@@ -129,6 +129,6 @@ newNavLinks.forEach(link => link.style.color = 'green');
 // Update styles in JavaScript
 
 document.body.style.backgroundColor = "lightGrey";
-mainContentHeading.forEach(link => link.style.color = 'blue');
+mainContentHeading.forEach(heading => heading.style.color = 'blue');
 document.body.style.fontFamily = "Comic Sans MS, cursive, sans-serif";
 document.body.style.fontWeight = "lighter";
